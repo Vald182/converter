@@ -1,9 +1,7 @@
-const length = (str) => str.length;
-const toUpperCase = str => str.toUpperCase();
 const converter = (str) => {
   let result = '';
-  let nstr = toUpperCase(str)
-  for (let i = 0; i < length(str); i += 1) {
+  let nstr = String(str.toUpperCase());
+  for (let i = 0; i < str.length; i += 1) {
     if (nstr[i] === 'A') {
       result += 'U';
       }
@@ -17,7 +15,7 @@ const converter = (str) => {
       result += 'A';
       }
     else {
-        throw new Error('В строке недопустимый символ!');
+        throw new Error('Invalid character in string!');
       }
     }
   return result;
