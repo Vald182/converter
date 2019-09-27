@@ -1,6 +1,9 @@
 const converter = (str) => {
+  if (str !==  String(str)) {
+    throw new Error('The parameter does not make sense');
+  }
   let result = '';
-  let nstr = String(str.toUpperCase());
+  const nstr = str.toUpperCase();
   for (let i = 0; i < str.length; i += 1) {
     if (nstr[i] === 'A') {
       result += 'U';
@@ -19,5 +22,5 @@ const converter = (str) => {
       }
     }
   return result;
-  }
+}
 export default converter;
