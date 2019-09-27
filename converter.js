@@ -1,6 +1,6 @@
 const converter = (str) => {
   if (str !==  String(str)) {
-    throw new Error('The parameter does not make sense');
+    throw new Error('invalid parameter!');
   }
   let result = '';
   const nstr = str.toUpperCase();
